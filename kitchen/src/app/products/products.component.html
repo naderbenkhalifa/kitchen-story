@@ -1,0 +1,79 @@
+<div class="Header">
+       
+        
+            
+            <div class="col-md-12" >
+               
+               
+                <strong class="header-title"> Kitchen Story</strong>
+                <div class="padding">
+                    <button class="btn" type="button" (click)="addProduct()">Add product</button>
+                    <button class="btn" (click)="navigate()" >
+                        <i style="font-size: 30px;color:#bf1e2e;" class="fas fa-cart-plus"></i>
+                         <div style="font-size: 15px;color: #607d8b; padding: 0;" class="badge"  >{{ totalQuantity }}</div>
+                       </button>
+                        <button class="btn" type="button" (click)="logout()">Logout</button>
+                     
+                     
+                            
+                             
+                             <button class="btn" type="button" (click)="change()">Change password</button>
+                            
+           
+                            
+                   
+                    </div>
+                   
+             
+                    
+           
+          </div>
+        
+      
+    </div>
+<div class="card-top container-fluid">
+    <div class="container d-flex">
+        <div class="container d-flex">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="navSec">
+                    <a class="navbar-brand">All Products</a>
+                </div>
+                
+            </nav>
+            <div class="form-group">
+                <input type="text" class="form-control" name="searchKey" placeholder="Search Product" (keyup)="filterProduct($event)" [(ngModel)]="searchText">
+            </div>
+            <button class="fas fa-search search-icon"  (click)="filterProduct($event)"></button>
+          
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        
+       <ng-container *ngFor="let item of products">
+        &nbsp;
+            <div class="card w-50 col-md-3">
+                <img [src]='item.category' class="card-img-top" >
+                <h5>{{item.name}} </h5>
+                <p><strong>Price: </strong>${{item.price}}</p>
+    <div>
+    <div style='float: left' >            
+    <button class="btn btn-link" (click)="addToCart(item)"><i class="fa fa-plus" aria-hidden="true"></i> &nbsp;Add to Cart</button>
+    
+    </div> 
+    <div style='float: right'>
+    <button class="btn btn-link text-danger" (click)="delete(item.id!)"><i class="fas fa-trash-alt"></i>&nbsp;Delete</button>
+    </div>
+</div>
+   
+       
+    </div>
+           
+        </ng-container>
+       
+    </div>
+</div>
+<div *ngIf="products?.length == 0" class="alert alert-warning col-md-12" role="alert">
+    No products found.
+</div>

@@ -1,0 +1,34 @@
+<app-header></app-header>
+&nbsp;
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+            <div style="text-align:center"><h6>Change password</h6></div>
+        
+        
+            <div class="md-form mb-3">
+                <i class="fas fa-envelope prefix grey-text"></i>
+                <input type="email" placeholder="Email" class="form-control validate" name="email" [(ngModel)]="params.email">
+               
+            </div>
+            &nbsp;
+
+
+
+            <div class="md-form mb-3">
+                <i class="fas fa-lock prefix grey-text"></i>
+                <input type="password" placeholder="Old password" class="form-control validate" name="oldPassword">
+            </div>
+            &nbsp;
+
+            <div class="md-form mb-3">
+                <i class="fas fa-lock prefix grey-text"></i>
+                <input type="password" placeholder="New password" class="form-control validate" name="newPassword" [(ngModel)]="params.newPassword">
+            </div>
+           
+       
+            <div style="text-align:center"><button  class="btn btn-primary"  (click)="save()" >Save</button></div>
+            
+        </div>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+<app-header></app-header>
+&nbsp;
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+
+
+
+           <div style="text-align:center"><h6>Sign in</h6></div>
+           &nbsp;
+           <div class="error-msg" *ngIf ="message.length!=0">
+             <i class="fa fa-times-circle"></i>
+             {{message}}
+           </div>
+        
+
+   
+        
+        <div class="md-form mb-3">
+            <i class="fas fa-envelope prefix grey-text"></i>
+            <input type="email" id="defaultForm-email" class="form-control validate" [(ngModel)]="user.email">
+            <label data-error="wrong" data-success="right" for="defaultForm-email">Your email</label>
+ 
+        </div>
+        <div class="md-form mb-3">
+            <i class="fas fa-lock prefix grey-text"></i>
+            <input type="password" id="defaultForm-pass" class="form-control validate"  [(ngModel)]="user.password">
+            <label data-error="wrong" data-success="right" for="defaultForm-pass">Your password</label>
+        </div>
+
+    
+   
+    <div style="text-align:center"><button  class="btn btn-primary" (click)="signIn()">Login</button></div>
+    &nbsp;
+    <div style="text-align:center">
+        <small class="btn btn-success btn-sm" [routerLink]="['/register']"> Register </small>
+        </div>
+    </div>
+</div>
+</div>

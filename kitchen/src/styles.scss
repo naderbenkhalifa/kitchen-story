@@ -1,0 +1,38 @@
+
+.logo{
+    position:relative;
+   
+    top: 10px;
+    height: 150px;
+    width: 150px;
+    left: 20px;
+}
+
+.header-title{
+    position: relative;
+    top: 10px;
+   
+    left:25px;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 40px;
+    color:#828482;
+}
+
+.form-area{
+    background:#e5e5e5;
+    position:relative;
+    margin-bottom:45px;
+    padding:50px 20px;
+    border:3px solid #ccc
+}
+
+.form-area h3{
+    position:absolute;
+    top:-26px;
+    left:13px;
+    background:#e5e5e5;
+    padding:10px 20px;
+    font-weight:500;
+    z-index:23;
+    display:inline-block
+}
